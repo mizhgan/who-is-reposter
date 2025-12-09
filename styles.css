@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  overflow: hidden; /* Prevent scrolling on mobile during game */
+  touch-action: none; /* Prevent browser zooming/scrolling */
+  font-family: 'Roboto', sans-serif;
+}

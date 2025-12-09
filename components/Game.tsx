@@ -1,19 +1,17 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 import { 
   CANVAS_SIZE, 
   PADDLE_WIDTH, 
-  PADDLE_HEIGHT, 
   PADDLE_OFFSET, 
   BALL_RADIUS, 
   INITIAL_SPEED, 
   MAX_SPEED, 
-  SPEED_INCREMENT, 
   GOAL_WIDTH, 
   CHAR_CONFIG, 
   ACCORDION_EMOJI,
   WALL_THICKNESS
 } from '../constants';
-import { CharacterType, GameState, BallState, Particle } from '../types';
+import { CharacterType, BallState, Particle } from '../types';
 
 interface GameProps {
   playerChar: CharacterType;
@@ -22,7 +20,7 @@ interface GameProps {
 
 const Game: React.FC<GameProps> = ({ playerChar, onGameOver }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number>(0);
   
   // CPU Character is the opposite
   const cpuChar = playerChar === CharacterType.BIRDY ? CharacterType.BLACKMAN : CharacterType.BIRDY;

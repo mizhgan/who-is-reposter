@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Game from './components/Game';
 import { CharacterType, GameState } from './types';
 import { CHAR_CONFIG } from './constants';
